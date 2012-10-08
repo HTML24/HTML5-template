@@ -15,7 +15,7 @@ CSS
 
 In the beginning of the CSS-file there's a few lines of code for resetting the standard CSS. This is added to reduce browser inconsistencies in different stylings such as margins and paddings.
 
-Hereafter we've added a '.clear' class, which is to be used for fixing float problems. 
+Hereafter we've added a `.clear` class, which is to be used for fixing float problems. 
 
 This is followed by a list of all the header-text-tags and paragraph-tags, which has received some default values. **These should be changed to fit your current project!**
 
@@ -40,7 +40,7 @@ The styling in the CSS-files should be indented like in the HTML-file. This will
 
 Do whatever you can to avoid using inline styling as this is not semantic code. Even if you use jQuery.
 
-If you need to add styling with jQuery, then add a class to the element instead of adding inline styling with 'jQuery().css()'.
+If you need to add styling with jQuery, then add a class to the element instead of adding inline styling with `jQuery().css()`.
 
 
 ### Hover Image
@@ -80,7 +80,7 @@ Optional Header References
 
 There are a lot of other header references as touch icons, Google Analytics and so on, which aren't needed in all projects. Therefore we've made a list of all these optional references here, to get the right code and get it faster:
 
-- Google Analytics:
+- Google Analytics (remember to change the account UA-code):
 
 		<script type="text/javascript">
 
@@ -95,7 +95,8 @@ There are a lot of other header references as touch icons, Google Analytics and 
 		  })();
 
 		</script>
-- Piwik:
+		
+- Piwik (remember to edit the `{$PIWIK_URL}` and `{$IDSITE}`):
 
 		<script type="text/javascript">
 			var pkBaseURL = (("https:" == document.location.protocol) ? "https://{$PIWIK_URL}/" : "http://{$PIWIK_URL}/");
