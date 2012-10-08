@@ -63,6 +63,7 @@ Optional Header References
 There are a lot of other header references as touch icons, Google Analytics and so on, which aren't needed in all projects. Therefore we've made a list of all these optional references here, to get the right code and get it faster:
 
 - Google Analytics:
+
 		<script type="text/javascript">
 
 		  var _gaq = _gaq || [];
@@ -77,6 +78,7 @@ There are a lot of other header references as touch icons, Google Analytics and 
 
 		</script>
 - Piwik:
+
 		<script type="text/javascript">
 			var pkBaseURL = (("https:" == document.location.protocol) ? "https://{$PIWIK_URL}/" : "http://{$PIWIK_URL}/");
 			document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
@@ -87,12 +89,16 @@ There are a lot of other header references as touch icons, Google Analytics and 
 				piwikTracker.enableLinkTracking();
 			} catch( err ) {}
 		</script>
+		
 - [Placeholder javascript plugin](https://github.com/danielstocks/jQuery-Placeholder)
 - Touch icons (if you need to add a icon for Android phones, then create the icon as a ["apple-touch-icon-precomposed"](http://mathiasbynens.be/notes/touch-icons) - this removes the fancy effects on the Home Screen such as rounded corners and reflective shine):
+
 		<link rel="apple-touch-icon" href="" /> <!-- iPhone -->
 		<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" /> <!-- iPad -->
 		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone4.png" /> <!-- high-resolution iPhone and iPod -->
 		<link rel="apple-touch-icon" sizes="144x144" href="" /> <!-- high-resolution iPad -->
+		
 - Viewport meta tag:
+
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	
