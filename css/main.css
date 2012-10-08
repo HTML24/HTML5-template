@@ -1,0 +1,71 @@
+/* ----------- CSS reset (make styles look the same in every browser) ----------- */
+
+html{color:#000;background:white;}
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}
+li{list-style:none;}
+caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select{*font-size:100%;}legend{color:#000;}
+a img {border:none}
+
+/* ----------- Clear and Spacing ----------- */
+
+.clear {
+	clear: both;
+	display: block;
+	font-size: 1px;
+	line-height: 1px;
+	height: 1px;
+	margin: 0 0 -1px 0;
+}
+
+/* ----------- Font styles ----------- */
+
+/* Add your main text styles here, this should ALWAYS be styled */
+html, 
+body {
+	font-family: Verdana, Geneva, sans-serif; /* Add your MAIN font-family here */
+	font-size: 14px;
+}
+h1 {
+	font-size: 32px;
+}
+h2 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 20px;
+}
+h4 {
+	font-size: 16px;
+}
+h5 {
+	font-size: 16px;
+}
+h6 {
+	font-size: 14px;
+	font-weight: bold;
+}
+p {
+	font-size: 14px;
+	margin-bottom: 14px;
+}
+b, strong {
+	font-weight: bold;
+}
+a {
+	color: #888;
+	text-decoration: underline;
+}
+a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+
+/* ----------- Structure ----------- */
+
+/* Insert styles for the website here */
