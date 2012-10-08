@@ -1,12 +1,24 @@
 HTML5-template
 ==============
 
-This is the standard HTML5-based template for HTML24, which is to be used for every project.  return
-To use this, simply make a clone of this GitHub Repository to the wanted folder directory. 
+This is the standard HTML5-based template for HTML24, which is to be used for every project.
+
+To use this, simply make a clone of this GitHub Repository to the wanted folder directory of the new project.
 
 
-Writing CSS
------------
+Below is a description of this HTML5 template.
+
+
+CSS
+---
+
+### CSS Reset
+
+In the beginning of the CSS-file there's a few lines of code for resetting the standard CSS. This is added to reduce browser inconsistencies in different stylings such as margins and paddings.
+
+Hereafter we've added a '.clear' class, which is to be used for fixing float problems. 
+
+This is followed by a list of all the header-text-tags and paragraph-tags, which has received some default values. **These should be changed to fit your current project!**
 
 ### Special Fonts
 
@@ -16,23 +28,24 @@ If you need to use a special font for your project, then use the css-way with fo
 ### CSS3
 
 Rounded corners, box shadows and other CSS3 stylings should always be discussed with the project manager for each project, before choosing a solution.
+If you really want to use some CSS3, then it is advised **only** to use this to add effects, that doesn't change the layout on the page. For example you can add a [transition](http://www.w3schools.com/css3/css3_transitions.asp) effect on hover on navigation-elements. 
 
 
 ### Standard coding in the CSS-file
 
-The styling in the CSS-files should be indented like in the HTML-file. 
+The styling in the CSS-files should be indented like in the HTML-file. This will make it easier for others to make changes in the styling if needed.
 
 
 ### Inline styling
 
 Do whatever you can to avoid using inline styling as this is not semantic code. Even if you use jQuery.
 
-If you need to add styling with jQuery add a class to the element instead of adding inline styling with jQuery.css(). 
+If you need to add styling with jQuery, then add a class to the element instead of adding inline styling with 'jQuery().css()'.
 
 
 ### Hover Image
 
-When you create a button or another project, that uses a background image and also has a hover effect, then use a sprite image instead of two separate images. Two separate images will sometimes cause a delay on the hover effect, that's why we use a sprite image for hover images.
+When you create a button or any other element that uses a background image, which has a hover effect, then use a sprite image instead of two separate images. Two separate images will sometimes cause a delay on the hover effect (because the image isn't preloaded), that's why we use a sprite image for hover images.
 
 
 Javascript
@@ -42,20 +55,25 @@ We are using the javascript library jQuery as standard, and the newest will alwa
 
 ### Script.js
 
-In the js-folder there is a script.js file, where all the custom jQuery code should be written. This means that we should stop writing javascript codes in the HTML-files, and start writing them in separate files.
+In the js-folder there is a script.js file, where all the custom jQuery code should be written. This means that javascript codes shouldn't be written in the HTML-headers, but this should be coded in separate files.
 
 
-Writing HTML
-------------
+HTML
+----
+
+### Title tag
+
+Remember to change the title tag when you begin writing your HTML for a new project.
+
+### Favicon
+
+For every project we will make a favicon. There is already a reference to this favicon in the head of the HTML-file.
+
 
 ### HTML5
 
 As this is a HTML5 template you are allowed to use HTML5-tags. To make them recognized in old browsers (mostly Internet Explorer) we are using the javascript plugin [HTML5shiv](https://github.com/aFarkas/html5shiv). 
 
-
-### Favicon
-
-For every project we will make a favicon. There is already a reference to this favicon in the head of the HTML-file.
 
 
 Optional Header References
@@ -105,6 +123,8 @@ There are a lot of other header references as touch icons, Google Analytics and 
 - Viewport meta tag:
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+- 
 
 
 Corrections in this template

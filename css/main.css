@@ -5,11 +5,12 @@ html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,
 table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}
 li{list-style:none;}
 caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
-q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}
 sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}
 input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
 input,textarea,select{*font-size:100%;}legend{color:#000;}
-a img {border:none}
+a img {border:none;}
+blockquote,q{quotes:none;}
 
 /* ----------- Clear and Spacing ----------- */
 
@@ -24,11 +25,11 @@ a img {border:none}
 
 /* ----------- Font styles ----------- */
 
-/* Add your main text styles here, this should ALWAYS be styled */
 html, 
 body {
-	font-family: Verdana, Geneva, sans-serif; /* Add your MAIN font-family here */
+	font-family: Verdana, Geneva, sans-serif;
 	font-size: 14px;
+	line-height: 1;
 }
 h1 {
 	font-size: 32px;
@@ -66,6 +67,4 @@ a:hover {
 }
 
 
-/* ----------- Structure ----------- */
-
-/* Insert styles for the website here */
+/* ----------- Global styles ----------- */
