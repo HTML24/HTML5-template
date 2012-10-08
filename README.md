@@ -1,58 +1,59 @@
 HTML5-template
 ==============
 
-Standard HTML5-based template for HTML24.
-
-This is the standard HTML5-based template for HTML24, which is to be used for every project. 
+This is the standard HTML5-based template for HTML24, which is to be used for every project.  return
 To use this, simply make a clone of this GitHub Repository to the wanted folder directory. 
 
 
-Special Fonts
--------------
+Writing CSS
+-----------
+
+### Special Fonts
 
 If you need to use a special font for your project, then use the css-way with font-face. To generate the correct css-syntax and get the correct file formats for the font-face, use a font-face generator. Use the [FontSquirrel generator](fontsquirrel.com/fontface/generator) for this. If fontsquirrel doesn't work, then use either [Code and More](http://fontface.codeandmore.com/index.php) or [Font2Web](http://www.font2web.com/).
 
 
-CSS3
-----
+### CSS3
 
 Rounded corners, box shadows and other CSS3 stylings should always be discussed with the project manager for each project, before choosing a solution.
 
 
-Standard coding in the CSS-file
--------------------------------
+### Standard coding in the CSS-file
 
 The styling in the CSS-files should be indented like in the HTML-file. 
 
 
-Inline styling
---------------
+### Inline styling
 
 Do whatever you can to avoid using inline styling as this is not semantic code. Even if you use jQuery.
 
 If you need to add styling with jQuery add a class to the element instead of adding inline styling with jQuery.css(). 
 
 
-Hover Image
------------
+### Hover Image
 
 When you create a button or another project, that uses a background image and also has a hover effect, then use a sprite image instead of two separate images. Two separate images will sometimes cause a delay on the hover effect, that's why we use a sprite image for hover images.
 
 
-Script.js
----------
+Javascript
+----------
+
+We are using the javascript library jQuery as standard, and the newest will always be present in the template-files.
+
+### Script.js
 
 In the js-folder there is a script.js file, where all the custom jQuery code should be written. This means that we should stop writing javascript codes in the HTML-files, and start writing them in separate files.
 
 
-HTML5
------
+Writing HTML
+------------
+
+### HTML5
 
 As this is a HTML5 template you are allowed to use HTML5-tags. To make them recognized in old browsers (mostly Internet Explorer) we are using the javascript plugin [HTML5shiv](https://github.com/aFarkas/html5shiv). 
 
 
-Favicon
--------
+### Favicon
 
 For every project we will make a favicon. There is already a reference to this favicon in the head of the HTML-file.
 
@@ -90,7 +91,10 @@ There are a lot of other header references as touch icons, Google Analytics and 
 			} catch( err ) {}
 		</script>
 		
-- [Placeholder javascript plugin](https://github.com/danielstocks/jQuery-Placeholder)
+- [Placeholder javascript plugin](https://github.com/danielstocks/jQuery-Placeholder) (download the file and put it in the js-folder):
+
+		<script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
+
 - Touch icons (if you need to add a icon for Android phones, then create the icon as a ["apple-touch-icon-precomposed"](http://mathiasbynens.be/notes/touch-icons) - this removes the fancy effects on the Home Screen such as rounded corners and reflective shine):
 
 		<link rel="apple-touch-icon" href="" /> <!-- iPhone -->
@@ -101,4 +105,9 @@ There are a lot of other header references as touch icons, Google Analytics and 
 - Viewport meta tag:
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
+
+Corrections in this template
+----------------------------
+
+If you have suggestions for corrections of this template, then create a new branch and add the corrections or addons in there. Then these corrections/addons will be taking into consideration for the next update.
