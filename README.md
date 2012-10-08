@@ -5,7 +5,6 @@ This is the standard HTML5-based template for HTML24, which is to be used for ev
 
 To use this, simply make a clone of this GitHub Repository to the wanted folder directory of the new project.
 
-
 Below is a description of this HTML5 template.
 
 
@@ -28,6 +27,7 @@ If you need to use a special font for your project, then use the css-way with fo
 ### CSS3
 
 Rounded corners, box shadows and other CSS3 stylings should always be discussed with the project manager for each project, before choosing a solution.
+
 If you really want to use some CSS3, then it is advised **only** to use this to add effects, that doesn't change the layout on the page. For example you can add a [transition](http://www.w3schools.com/css3/css3_transitions.asp) effect on hover on navigation-elements. 
 
 
@@ -68,7 +68,6 @@ Remember to change the title tag when you begin writing your HTML for a new proj
 ### Favicon
 
 For every project we will make a favicon. There is already a reference to this favicon in the head of the HTML-file.
-
 
 ### HTML5
 
@@ -124,7 +123,10 @@ There are a lot of other header references as touch icons, Google Analytics and 
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-- 
+- Description and keyword meta tags:
+
+		<meta name="description" content="Description" />
+		<meta name="keywords" content="Keywords" />
 
 
 Corrections in this template
