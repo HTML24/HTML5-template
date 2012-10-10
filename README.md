@@ -5,6 +5,8 @@ This is the standard HTML5-based template for HTML24, which is to be used for ev
 
 To use this, simply make a clone of this GitHub Repository to the wanted folder directory of the new project.
 
+If you choose to download this template as a ZIP-file then we advise you to remember to delete unnecessary files such as .gitignore files.
+
 Below is a description of this HTML5 template.
 
 
@@ -24,7 +26,7 @@ The `.clear` class is used on an empty element (fx a div-tag). This element shou
 
 		<div class="wrapper">
 		
-				<h1>The .wrapper element is the element beeing cleared</h1>
+				<h1>The .wrapper element is the element beeing cleared.</h1>
 			
 				<div class="clear"></div>
 			
@@ -34,7 +36,7 @@ The other class `.clearfix` is added as a class on the element, which you want t
 
 		<div class="wrapper clearfix">
 		
-				<h1>The .wrapper element is the element beeing cleared</h1>
+				<h1>The .wrapper element is the element beeing cleared.</h1>
 			
 		</div>
 
