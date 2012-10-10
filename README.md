@@ -15,13 +15,38 @@ CSS
 
 In the beginning of the CSS-file there's a few lines of code for resetting the standard CSS. This is added to reduce browser inconsistencies in different stylings such as margins and paddings.
 
-Hereafter we've added a `.clear` class, which is to be used for fixing float problems. 
 
-This is followed by a list of all the header-text-tags and paragraph-tags, which has received some default values. **These should be changed to fit your current project!**
+### Clearing floats
 
-### Special Fonts
+We've added a `.clear` and a `.clearfix` class, which are both used for fixing float problems. 
 
-If you need to use a special font for your project, then use the css-way with font-face. To generate the correct css-syntax and get the correct file formats for the font-face, use a font-face generator. Use the [FontSquirrel generator](fontsquirrel.com/fontface/generator) for this. If fontsquirrel doesn't work, then use either [Code and More](http://fontface.codeandmore.com/index.php) or [Font2Web](http://www.font2web.com/).
+The `.clear` class is used on an empty element (fx a div-tag). This element should then be placed in the end of the element, which you want to be cleared, right before it closes. For example:
+
+		<div class="wrapper">
+		
+				<h1>The .wrapper element is the element beeing cleared</h1>
+			
+				<div class="clear"></div>
+			
+		</div>
+		
+The other class `.clearfix` is added as a class on the element, which you want to clear. If we use it in the same example as above:
+
+		<div class="wrapper clearfix">
+		
+				<h1>The .wrapper element is the element beeing cleared</h1>
+			
+		</div>
+
+
+### Standard font-styles
+
+In the CSS-file, after the two different float clearing classes, there's a list of all the header-text-tags and paragraph-tags, which has received some default values. **These should be changed to fit your current project!**
+
+
+### Special Fonts (@font-face)
+
+If you need to use a special font for your project, then use the css-way with font-face. To generate the correct css-syntax and get the correct file formats for the font-face, use a font-face generator. Use the [FontSquirrel generator](http://www.fontsquirrel.com/fontface/generator) for this. If fontsquirrel doesn't work, then use either [Code and More](http://fontface.codeandmore.com/index.php) or [Font2Web](http://www.font2web.com/).
 
 
 ### CSS3
@@ -96,7 +121,7 @@ There are a lot of other header references as touch icons, Google Analytics and 
 
 		</script>
 		
-- Piwik (remember to edit the `{$PIWIK_URL}` and `{$IDSITE}`):
+- Piwik (remember to edit the `{$PIWIK_URL}` and `{$IDSITE}`) - if you want to read more about this open source web analytics software (an alternative to Google Analytics) go to their website [here](http://piwik.org/):
 
 		<script type="text/javascript">
 			var pkBaseURL = (("https:" == document.location.protocol) ? "https://{$PIWIK_URL}/" : "http://{$PIWIK_URL}/");
@@ -109,7 +134,7 @@ There are a lot of other header references as touch icons, Google Analytics and 
 			} catch( err ) {}
 		</script>
 		
-- [Placeholder javascript plugin](https://github.com/danielstocks/jQuery-Placeholder) (download the file and put it in the js-folder):
+- [Placeholder javascript plugin](https://github.com/danielstocks/jQuery-Placeholder) (download the file and put it in the js-folder) - This plugin adds a fallback for the HTML5 placeholder attribute in older browser, so you can use this attribute without having to think about older browsers:
 
 		<script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
 
@@ -120,11 +145,11 @@ There are a lot of other header references as touch icons, Google Analytics and 
 		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone4.png" /> <!-- high-resolution iPhone and iPod -->
 		<link rel="apple-touch-icon" sizes="144x144" href="" /> <!-- high-resolution iPad -->
 		
-- Viewport meta tag:
+- Viewport meta tag - This should be used if you style your website to fit on a smartphone aswell, read more about it [here](https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag):
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-- Description and keyword meta tags:
+- Description and keyword meta tags - these tells search engines about the website, read more about it [here](http://searchenginewatch.com/article/2067564/How-To-Use-HTML-Meta-Tags):
 
 		<meta name="description" content="Description" />
 		<meta name="keywords" content="Keywords" />

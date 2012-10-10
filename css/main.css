@@ -15,12 +15,27 @@ blockquote,q{quotes:none;}
 /* ----------- Clear and Spacing ----------- */
 
 .clear {
-	clear: both;
+	margin: 0 0 -1px 0;
+	line-height: 1px;
 	display: block;
 	font-size: 1px;
-	line-height: 1px;
+	clear: both;
 	height: 1px;
-	margin: 0 0 -1px 0;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	line-height: 0;
+	content: " ";
+	clear: both;	
+	height: 0;
+}
+* html .clearfix {
+	zoom: 1;
+}
+*:first-child+html .clearfix {
+	zoom: 1;
 }
 
 /* ----------- Font styles ----------- */
@@ -64,6 +79,24 @@ a {
 a:hover {
 	color: #000;
 	text-decoration: underline;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+ul li {
+	margin: 0;
+	padding: 0;
+	list-style: disc;
+}
+ol {
+	margin: 0;
+	padding: 0;
+}
+ol li {
+	margin: 0;
+	padding: 0;
+	list-style: decimal;
 }
 
 
