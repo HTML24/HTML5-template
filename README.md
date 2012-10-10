@@ -80,6 +80,8 @@ Javascript
 
 We are using the javascript library jQuery as standard, and the newest will always be present in the template-files.
 
+In this template we've also chosen to use html5shiv, read why [here](#html5).
+
 ### Script.js
 
 In the js-folder there is a script.js file, where all the custom jQuery code should be written. This means that javascript codes shouldn't be written in the HTML-headers, but this should be coded in separate files.
