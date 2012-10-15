@@ -155,8 +155,8 @@ There are a lot of other header references as touch icons, Google Analytics and 
 		
 - Description and keyword meta tags - these tells search engines about the website, read more about it [here](http://searchenginewatch.com/article/2067564/How-To-Use-HTML-Meta-Tags):
 
-		<meta name="description" content="Description" />
-		<meta name="keywords" content="Keywords" />
+		<meta name="description" content="Description">
+		<meta name="keywords" content="Keywords">
 
 
 Corrections in this template
