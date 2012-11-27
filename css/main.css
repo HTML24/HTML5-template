@@ -8,6 +8,7 @@ caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;
 blockquote:before,blockquote:after,q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}
 sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}
 input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select{*font-size:100%;}
 legend{color:#000;}
 a img {border:none;}
 blockquote,q{quotes:none;}
@@ -32,6 +33,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{di
 	clear: both;	
 	height: 0;
 }
+* html .clearfix {
+	zoom: 1;
+}
+*:first-child+html .clearfix {
+	zoom: 1;
+}
+
 
 /* ----------- Font styles ----------- */
 
