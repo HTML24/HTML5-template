@@ -104,6 +104,7 @@ To this:
 		font-style: normal;
 	}
 
+Read more about this problem at [adtrack.co.uk](http://www.adtrak.co.uk/blog/font-face-chrome-rendering/).
 
 ### CSS3
 
