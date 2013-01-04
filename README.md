@@ -10,6 +10,27 @@ If you choose to download this template as a ZIP-file then we advise you to reme
 Below is a description of this HTML5 template.
 
 
+## Table of Contents
+
+- [CSS](#css)
+	- [CSS Reset](#css-reset)
+	- [Clearing floats](#clearing-floats)
+	- [Standard font-styles](#standard-font-styles)
+	- [Special Fonts (@font-face)](#special-fonts-font-face)
+	- [CSS3](#css3)
+	- [Standard coding in the CSS-file](#standard-coding-in-the-css-file)
+	- [Inline styling](#inline-styling)
+	- [Hover Image](#hover-image)
+- [Javascript](#javascript)
+	- [Scripts.js](#scriptsjs)
+- [HTML](#html)
+	- [Title tag](#title-tag)
+	- [Favicon](#favicon)
+	- [HTML5](#html5)
+- [Optional Header References](#optional-header-references)
+-
+
+
 CSS
 ---
 
@@ -50,6 +71,33 @@ In the CSS-file, after the two different float clearing classes, there's a list 
 
 If you need to use a special font for your project, then use the css-way with font-face. To generate the correct css-syntax and get the correct file formats for the font-face, use a font-face generator. Use the [FontSquirrel generator](http://www.fontsquirrel.com/fontface/generator) for this. If fontsquirrel doesn't work, then use either [Code and More](http://fontface.codeandmore.com/index.php) or [Font2Web](http://www.font2web.com/).
 
+When you use one of the above font-face generators, then there is one thing you need to be aware of. If you just copy/paste the code from the generator, then you might experience a jagged looking font. This happens because Chrome loads the svg-font, which is the last in the list, and this format isn't as sharp and crisp as some of the others. Therefore this needs to be loaded right after the `.eot` fonts. 
+So the `@font-face` should be changed from this:
+
+	@font-face {
+		font-family: 'font-name';
+		src: url('../fonts/font-name.eot');
+		src: url('../fonts/font-name.eot?#iefix') format('eot'),
+			 url('../fonts/font-name.woff') format('woff'),
+			 url('../fonts/font-name.ttf') format('truetype'),
+			 url('../fonts/font-name.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+To this:
+
+	@font-face {
+		font-family: 'font-name';
+		src: url('../fonts/font-name.eot');
+		src: url('../fonts/font-name.eot?#iefix') format('eot'),
+			 url('../fonts/font-name.svg') format('svg'),
+			 url('../fonts/font-name.woff') format('woff'),
+			 url('../fonts/font-name.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+
 
 ### CSS3
 
@@ -82,7 +130,7 @@ We are using the javascript library jQuery as standard, and the newest will alwa
 
 In this template we've also chosen to use html5shiv, read why [here](#html5).
 
-### Script.js
+### Scripts.js
 
 In the js-folder there is a script.js file, where all the custom jQuery code should be written. This means that javascript codes shouldn't be written in the HTML-headers, but this should be coded in separate files.
 
@@ -109,54 +157,72 @@ Optional Header References
 
 There are a lot of other header references as touch icons, Google Analytics and so on, which aren't needed in all projects. Therefore we've made a list of all these optional references here, to get the right code and get it faster:
 
-- Google Analytics (remember to change the account UA-code):
+### Google Analytics
 
-		<script type="text/javascript">
+Remember to change the account UA-code.
 
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-XXXXX-X']);
-		  _gaq.push(['_trackPageview']);
+	<script type="text/javascript">
 
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-XXXXX-X']);
+		_gaq.push(['_trackPageview']);
 
-		</script>
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
 		
-- Piwik (remember to edit the `{$PIWIK_URL}` and `{$IDSITE}`) - if you want to read more about this open source web analytics software (an alternative to Google Analytics) go to their website [here](http://piwik.org/):
+### Piwik
 
-		<script type="text/javascript">
-			var pkBaseURL = (("https:" == document.location.protocol) ? "https://{$PIWIK_URL}/" : "http://{$PIWIK_URL}/");
-			document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-		</script><script type="text/javascript">
-			try {
-				var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", {$IDSITE});
-				piwikTracker.trackPageView();
-				piwikTracker.enableLinkTracking();
-			} catch( err ) {}
-		</script>
+Remember to edit the `{$PIWIK_URL}` and `{$IDSITE}`) - if you want to read more about this open source web analytics software (an alternative to Google Analytics) go to their website [here](http://piwik.org/).
+
+	<script type="text/javascript">
+		var pkBaseURL = (("https:" == document.location.protocol) ? "https://{$PIWIK_URL}/" : "http://{$PIWIK_URL}/");
+		document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script type="text/javascript">
+		try {
+			var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", {$IDSITE});
+			piwikTracker.trackPageView();
+			piwikTracker.enableLinkTracking();
+		} catch( err ) {}
+	</script>
 		
-- [Placeholder javascript plugin](https://github.com/danielstocks/jQuery-Placeholder) (download the file and put it in the js-folder) - This plugin adds a fallback for the HTML5 placeholder attribute in older browser, so you can use this attribute without having to think about older browsers:
+### Placeholder javascript plugin
 
-		<script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
+[Placeholder javascript plugin](https://github.com/danielstocks/jQuery-Placeholder) (download the file and put it in the js-folder) - This plugin adds a fallback for the HTML5 placeholder attribute in older browser, so you can use this attribute without having to think about older browsers:
 
-- Touch icons (if you need to add a icon for Android phones, then create the icon as a ["apple-touch-icon-precomposed"](http://mathiasbynens.be/notes/touch-icons) - this removes the fancy effects on the Home Screen such as rounded corners and reflective shine):
+	<script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
+	
+If you use this plugin, then you need to remember to execute the following on document ready:
 
-		<link rel="apple-touch-icon" href="" /> <!-- iPhone -->
-		<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" /> <!-- iPad -->
-		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone4.png" /> <!-- high-resolution iPhone and iPod -->
-		<link rel="apple-touch-icon" sizes="144x144" href="" /> <!-- high-resolution iPad -->
+	$('input[placeholder], textarea[placeholder]').placeholder();
+	
+### Touch icons
+
+If you need to add a icon for Android phones, then create the icon as a ["apple-touch-icon-precomposed"](http://mathiasbynens.be/notes/touch-icons) - this removes the fancy effects on the Home Screen such as rounded corners and reflective shine.
+
+Otherwise use the following for a normal touchicon:
+
+	<link rel="apple-touch-icon" href="" /> <!-- iPhone -->
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" /> <!-- iPad -->
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone4.png" /> <!-- high-resolution iPhone and iPod -->
+	<link rel="apple-touch-icon" sizes="144x144" href="" /> <!-- high-resolution iPad -->
 		
-- Viewport meta tag - This should be used if you style your website to fit on a smartphone aswell, read more about it [here](https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag):
+### Viewport meta tag
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+This should be used if you style your website to fit on a smartphone aswell, read more about it [here](https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag).
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-- Description and keyword meta tags - these tells search engines about the website, read more about it [here](http://searchenginewatch.com/article/2067564/How-To-Use-HTML-Meta-Tags):
+### Description and keyword meta tags
 
-		<meta name="description" content="Description">
-		<meta name="keywords" content="Keywords">
+These tells search engines about the website, read more about it [here](http://searchenginewatch.com/article/2067564/How-To-Use-HTML-Meta-Tags):
+
+	<meta name="description" content="Description">
+	<meta name="keywords" content="Keywords">
 
 
 Corrections in this template
