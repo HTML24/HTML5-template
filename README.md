@@ -28,7 +28,6 @@ Below is a description of this HTML5 template.
 	- [Favicon](#favicon)
 	- [HTML5](#html5)
 - [Optional Header References](#optional-header-references)
--
 
 
 CSS
