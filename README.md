@@ -28,6 +28,13 @@ Below is a description of this HTML5 template.
 	- [Favicon](#favicon)
 	- [HTML5](#html5)
 - [Optional Header References](#optional-header-references)
+	- [Google Analytics](#google-analytics)
+	- [Piwik](#piwik)
+	- [Placeholder javascript plugin](#placeholder-javascript-plguin)
+	- [Touch icons](#touch-icons)
+	- [Viewport meta tag](#viewport-meta-tag)
+	- [Description and keyword meta tags](#description-and-keyword-meta-tags)
+	
 
 
 CSS
