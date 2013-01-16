@@ -78,8 +78,9 @@ b, strong {
 a {
 	color: #888;
 	text-decoration: underline;
+	outline: none;
 }
-a:hover {
+a:hover, a:focus {
 	color: #000;
 	text-decoration: underline;
 }
