@@ -77,7 +77,7 @@ In the CSS-file, after the two different float clearing classes, there's a list 
 
 If you need to use a special font for your project, then use the css-way with font-face. To generate the correct css-syntax and get the correct file formats for the font-face, use a font-face generator. Use our internal [font-face generator](http://html24-dev.dk/dennis/fonttool/) created by @dvaeversted. This will provide you with the necessary files together with an example of usage. 
 
-If this should be down or not working for some reason, then use the [FontSquirrel generator](http://www.fontsquirrel.com/fontface/generator) instead. If fontsquirrel doesn't work, then use either [Code and More](http://fontface.codeandmore.com/index.php) or [Font2Web](http://www.font2web.com/).
+**If you aren't using our internal font-face generator**, or if it should be down or not working for some reason, then use the [FontSquirrel generator](http://www.fontsquirrel.com/fontface/generator) instead. If fontsquirrel doesn't work, then use either [Code and More](http://fontface.codeandmore.com/index.php) or [Font2Web](http://www.font2web.com/).
 
 When you use one of the above font-face generators, then there is one thing you need to be aware of. If you just copy/paste the code from the generator, then you might experience a jagged looking font. This happens because Chrome loads the svg-font, which is the last in the list, and this format isn't as sharp and crisp as some of the others. Therefore this needs to be loaded right after the `.eot` fonts. 
 So the `@font-face` should be changed from this:
