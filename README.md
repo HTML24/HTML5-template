@@ -30,7 +30,7 @@ Below is a description of this HTML5 template.
 - [Optional Header References](#optional-header-references)
 	- [Google Analytics](#google-analytics)
 	- [Piwik](#piwik)
-	- [Placeholder javascript plugin](#placeholder-javascript-plguin)
+	- [Placeholder javascript plugin](#placeholder-javascript-plugin)
 	- [Touch icons](#touch-icons)
 	- [Viewport meta tag](#viewport-meta-tag)
 	- [Description and keyword meta tags](#description-and-keyword-meta-tags)
