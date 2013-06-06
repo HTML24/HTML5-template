@@ -201,13 +201,19 @@ Remember to edit the `{$PIWIK_URL}` and `{$IDSITE}`) - if you want to read more 
 		
 ### Placeholder javascript plugin
 
-[Placeholder javascript plugin](https://github.com/danielstocks/jQuery-Placeholder) (download the file and put it in the js-folder) - This plugin adds a fallback for the HTML5 placeholder attribute in older browser, so you can use this attribute without having to think about older browsers:
+[Placeholder javascript plugin](https://github.com/mathiasbynens/jquery-placeholder) (download the file and put it in the js-folder) - This plugin adds a fallback for the HTML5 placeholder attribute in older browser, so you can use this attribute without having to think about older browsers:
 
 	<script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
 	
 If you use this plugin, then you need to remember to execute the following on document ready:
 
 	$('input[placeholder], textarea[placeholder]').placeholder();
+	
+Since this plugin automatically adds `class="placeholder"`, you can also use this plugin to style the color of the placeholder text color in older browsers. To style the placeholder text differently, use:
+
+	.placeholder {
+		color: #aaa;
+	}
 	
 ### Touch icons
 
