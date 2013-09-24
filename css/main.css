@@ -12,7 +12,7 @@ input,textarea,select{*font-size:100%;}
 legend{color:#000;}
 a img {border:none;}
 blockquote,q{quotes:none;}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block;}
 
 /* ----------- Clear and Spacing ----------- */
 
